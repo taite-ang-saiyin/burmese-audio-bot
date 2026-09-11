@@ -1,0 +1,51 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Python environments, caches, and test output
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Node and frontend build output
+node_modules/
+build/
+dist/
+coverage/
+
+# Logs and runtime artifacts
+*.log
+*.pid
+*.pid.lock
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+
+# Downloaded models and local data
+*.gguf
+models/
+hf_cache/
+cache/
+tmp/
+temp/
+uploads/
+outputs/
+**/scratch/pytest_tmp*/
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

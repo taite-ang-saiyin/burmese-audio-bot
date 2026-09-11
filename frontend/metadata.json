@@ -1,0 +1,6 @@
+{
+  "name": "Mingalar AI Banking Copilot",
+  "description": "AI-Powered Burmese Voice Banking Support Copilot with voice-first interaction, STT/TTS, bank knowledge RAG, and live conversational AI.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

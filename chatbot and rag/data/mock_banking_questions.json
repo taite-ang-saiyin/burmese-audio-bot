@@ -1,0 +1,534 @@
+{
+  "demo_only": true,
+  "notice": "Synthetic customer questions and expected retrieval results for local testing.",
+  "samples": [
+    {
+      "id": "lost_formal",
+      "intent": "atm_lost_card",
+      "style": "formal_burmese",
+      "question": "ATM ကတ်ပျောက်ဆုံးသွားပါက မည်သို့ဆောင်ရွက်ရမည်နည်း။",
+      "expected_grounded": true,
+      "expected_chunk_id": "chunk_9f823a",
+      "expected_document": "ATM_Services_FAQ_v1.pdf",
+      "expected_section": "Card Loss Procedure",
+      "answer_must_contain": [
+        "ATM",
+        "Block",
+        "မှတ်ပုံတင်"
+      ]
+    },
+    {
+      "id": "lost_casual",
+      "intent": "atm_lost_card",
+      "style": "casual_burmese",
+      "question": "ကတ်လေးပျောက်သွားလို့ ဘာအရင်လုပ်ရမလဲ။",
+      "expected_grounded": true,
+      "expected_chunk_id": "chunk_9f823a",
+      "expected_document": "ATM_Services_FAQ_v1.pdf",
+      "expected_section": "Card Loss Procedure",
+      "answer_must_contain": [
+        "ATM",
+        "Block",
+        "မှတ်ပုံတင်"
+      ]
+    },
+    {
+      "id": "lost_mixed",
+      "intent": "atm_lost_card",
+      "style": "mixed_language",
+      "question": "My ATM card lost ဖြစ်သွားတယ်၊ ဘယ်လို block လုပ်ရမလဲ။",
+      "expected_grounded": true,
+      "expected_chunk_id": "chunk_9f823a",
+      "expected_document": "ATM_Services_FAQ_v1.pdf",
+      "expected_section": "Card Loss Procedure",
+      "answer_must_contain": [
+        "ATM",
+        "Block",
+        "မှတ်ပုံတင်"
+      ]
+    },
+    {
+      "id": "replacement_formal",
+      "intent": "atm_card_replacement",
+      "style": "formal_burmese",
+      "question": "ATM ကတ်အသစ်ပြန်လည်လျှောက်ထားရန် မည်သည့်လုပ်ငန်းစဉ်များ လိုအပ်ပါသနည်း။",
+      "expected_grounded": true,
+      "expected_chunk_id": "atm_card_replacement",
+      "expected_document": "ATM_Card_Policy.pdf",
+      "expected_section": "Card Replacement",
+      "answer_must_contain": [
+        "PIN",
+        "identity verification"
+      ]
+    },
+    {
+      "id": "replacement_casual",
+      "intent": "atm_card_replacement",
+      "style": "casual_burmese",
+      "question": "ကျွန်တော့် PIN ကို ပြောပေးရင် ကတ်ပြန်လုပ်ပေးနိုင်လား။",
+      "expected_grounded": true,
+      "expected_chunk_id": "atm_card_replacement",
+      "expected_document": "ATM_Card_Policy.pdf",
+      "expected_section": "Card Replacement",
+      "answer_must_contain": [
+        "PIN",
+        "identity verification"
+      ]
+    },
+    {
+      "id": "replacement_mixed",
+      "intent": "atm_card_replacement",
+      "style": "mixed_language",
+      "question": "Card replacement လုပ်ဖို့ branch မှာ ဘာ verify လုပ်ရမလဲ။",
+      "expected_grounded": true,
+      "expected_chunk_id": "atm_card_replacement",
+      "expected_document": "ATM_Card_Policy.pdf",
+      "expected_section": "Card Replacement",
+      "answer_must_contain": [
+        "ATM",
+        "identity verification"
+      ]
+    },
+    {
+      "id": "cash_not_received_formal",
+      "intent": "atm_cash_not_received",
+      "style": "formal_burmese",
+      "question": "ATM မှ ငွေထုတ်ရာတွင် ငွေမထွက်ဘဲ account balance လျော့သွားပါက ဘာလုပ်ရမည်နည်း။",
+      "expected_grounded": true,
+      "expected_chunk_id": "atm_cash_not_received",
+      "expected_document": "DEMO_ATM_Dispute_Procedure.pdf",
+      "expected_section": "Cash Not Dispensed",
+      "answer_must_contain": [
+        "reference number",
+        "Customer Service"
+      ]
+    },
+    {
+      "id": "cash_not_received_casual",
+      "intent": "atm_cash_not_received",
+      "style": "casual_burmese",
+      "question": "ငွေမရဘဲ balance လျော့သွားတယ်၊ ဘယ်လိုလုပ်ရမလဲ။",
+      "expected_grounded": true,
+      "expected_chunk_id": "atm_cash_not_received",
+      "expected_document": "DEMO_ATM_Dispute_Procedure.pdf",
+      "expected_section": "Cash Not Dispensed",
+      "answer_must_contain": [
+        "reference number",
+        "ATM location"
+      ]
+    },
+    {
+      "id": "cash_not_received_mixed",
+      "intent": "atm_cash_not_received",
+      "style": "mixed_language",
+      "question": "ATM cash မထွက်ဘူး but balance လျော့သွားတယ်။",
+      "expected_grounded": true,
+      "expected_chunk_id": "atm_cash_not_received",
+      "expected_document": "DEMO_ATM_Dispute_Procedure.pdf",
+      "expected_section": "Cash Not Dispensed",
+      "answer_must_contain": [
+        "transaction receipt",
+        "Customer Service"
+      ]
+    },
+    {
+      "id": "retained_formal",
+      "intent": "atm_card_retained",
+      "style": "formal_burmese",
+      "question": "ATM စက်ထဲတွင် ကတ်ကျန်နေပြီး ကတ်မထွက်ပါက မည်သို့လုပ်ဆောင်ရမည်နည်း။",
+      "expected_grounded": true,
+      "expected_chunk_id": "atm_card_retained",
+      "expected_document": "DEMO_ATM_Operations_Guide.pdf",
+      "expected_section": "Card Retained by ATM",
+      "answer_must_contain": [
+        "ATM location",
+        "Customer Service Hotline"
+      ]
+    },
+    {
+      "id": "retained_casual",
+      "intent": "atm_card_retained",
+      "style": "casual_burmese",
+      "question": "စက်က ကတ်ကို ပြန်မပေးတော့ဘူး၊ ဘာလုပ်ရမလဲ။",
+      "expected_grounded": true,
+      "expected_chunk_id": "atm_card_retained",
+      "expected_document": "DEMO_ATM_Operations_Guide.pdf",
+      "expected_section": "Card Retained by ATM",
+      "answer_must_contain": [
+        "ATM location",
+        "ဘဏ်ခွဲ"
+      ]
+    },
+    {
+      "id": "retained_mixed",
+      "intent": "atm_card_retained",
+      "style": "mixed_language",
+      "question": "ATM မှာ card stuck ဖြစ်နေပြီး ကတ်မထွက်ဘူး။",
+      "expected_grounded": true,
+      "expected_chunk_id": "atm_card_retained",
+      "expected_document": "DEMO_ATM_Operations_Guide.pdf",
+      "expected_section": "Card Retained by ATM",
+      "answer_must_contain": [
+        "ATM location",
+        "Customer Service Hotline"
+      ]
+    },
+    {
+      "id": "pin_block_formal",
+      "intent": "atm_pin_blocked",
+      "style": "formal_burmese",
+      "question": "PIN မှားယွင်းရိုက်ထည့်မိ၍ ကတ်ပိတ်သွားပါက မည်သို့ဆောင်ရွက်ရမည်နည်း။",
+      "expected_grounded": true,
+      "expected_chunk_id": "atm_pin_blocked",
+      "expected_document": "DEMO_ATM_PIN_Security.pdf",
+      "expected_section": "Incorrect PIN and Card Block",
+      "answer_must_contain": [
+        "PIN reset",
+        "identity verification"
+      ]
+    },
+    {
+      "id": "pin_block_casual",
+      "intent": "atm_pin_blocked",
+      "style": "casual_burmese",
+      "question": "PIN မေ့သွားပြီး ကတ်ပိတ်နေတယ်၊ ထပ်စမ်းရမလား။",
+      "expected_grounded": true,
+      "expected_chunk_id": "atm_pin_blocked",
+      "expected_document": "DEMO_ATM_PIN_Security.pdf",
+      "expected_section": "Incorrect PIN and Card Block",
+      "answer_must_contain": [
+        "PIN",
+        "ထပ်မံမစမ်းသပ်"
+      ]
+    },
+    {
+      "id": "pin_block_mixed",
+      "intent": "atm_pin_blocked",
+      "style": "mixed_language",
+      "question": "Incorrect PIN ကြောင့် card blocked ဖြစ်သွားတယ်။",
+      "expected_grounded": true,
+      "expected_chunk_id": "atm_pin_blocked",
+      "expected_document": "DEMO_ATM_PIN_Security.pdf",
+      "expected_section": "Incorrect PIN and Card Block",
+      "answer_must_contain": [
+        "card unblock",
+        "PIN"
+      ]
+    },
+    {
+      "id": "otp_formal",
+      "intent": "mobile_otp_not_received",
+      "style": "formal_burmese",
+      "question": "Mobile Banking OTP မရရှိပါက မည်သို့ဆောင်ရွက်ရမည်နည်း။",
+      "expected_grounded": true,
+      "expected_chunk_id": "mobile_otp_not_received",
+      "expected_document": "DEMO_Mobile_Banking_FAQ.pdf",
+      "expected_section": "OTP Not Received",
+      "answer_must_contain": [
+        "OTP",
+        "network signal"
+      ]
+    },
+    {
+      "id": "otp_casual",
+      "intent": "mobile_otp_not_received",
+      "style": "casual_burmese",
+      "question": "OTP မဝင်သေးဘူး၊ resend ထပ်နှိပ်ရမလား။",
+      "expected_grounded": true,
+      "expected_chunk_id": "mobile_otp_not_received",
+      "expected_document": "DEMO_Mobile_Banking_FAQ.pdf",
+      "expected_section": "OTP Not Received",
+      "answer_must_contain": [
+        "resend",
+        "Customer Service"
+      ]
+    },
+    {
+      "id": "otp_mixed",
+      "intent": "mobile_otp_not_received",
+      "style": "mixed_language",
+      "question": "OTP not received ဖြစ်နေတာ ဘယ်လိုလုပ်ရမလဲ။",
+      "expected_grounded": true,
+      "expected_chunk_id": "mobile_otp_not_received",
+      "expected_document": "DEMO_Mobile_Banking_FAQ.pdf",
+      "expected_section": "OTP Not Received",
+      "answer_must_contain": [
+        "OTP",
+        "registered phone number"
+      ]
+    },
+    {
+      "id": "password_formal",
+      "intent": "mobile_password_reset",
+      "style": "formal_burmese",
+      "question": "Mobile Banking Password မေ့သွားပါက မည်သို့ reset ပြုလုပ်ရမည်နည်း။",
+      "expected_grounded": true,
+      "expected_chunk_id": "mobile_password_reset",
+      "expected_document": "DEMO_Mobile_Banking_FAQ.pdf",
+      "expected_section": "Password Reset",
+      "answer_must_contain": [
+        "Forgot Password",
+        "OTP"
+      ]
+    },
+    {
+      "id": "password_casual",
+      "intent": "mobile_password_reset",
+      "style": "casual_burmese",
+      "question": "Password မေ့လို့ app ထဲဝင်မရဘူး။",
+      "expected_grounded": true,
+      "expected_chunk_id": "mobile_password_reset",
+      "expected_document": "DEMO_Mobile_Banking_FAQ.pdf",
+      "expected_section": "Password Reset",
+      "answer_must_contain": [
+        "Forgot Password",
+        "Customer Service"
+      ]
+    },
+    {
+      "id": "password_mixed",
+      "intent": "mobile_password_reset",
+      "style": "mixed_language",
+      "question": "Forgot Password သုံးပြီး Mobile Banking login ပြန်ဝင်ချင်တယ်။",
+      "expected_grounded": true,
+      "expected_chunk_id": "mobile_password_reset",
+      "expected_document": "DEMO_Mobile_Banking_FAQ.pdf",
+      "expected_section": "Password Reset",
+      "answer_must_contain": [
+        "Password",
+        "OTP"
+      ]
+    },
+    {
+      "id": "fraud_formal",
+      "intent": "suspicious_transaction",
+      "style": "formal_burmese",
+      "question": "မိမိမပြုလုပ်သော transaction တစ်ခုတွေ့ရှိပါက မည်သို့တင်ပြရမည်နည်း။",
+      "expected_grounded": true,
+      "expected_chunk_id": "suspicious_transaction",
+      "expected_document": "DEMO_Fraud_Response_Policy.pdf",
+      "expected_section": "Unauthorized Transaction",
+      "answer_must_contain": [
+        "Customer Service Hotline",
+        "transaction review"
+      ]
+    },
+    {
+      "id": "fraud_casual",
+      "intent": "suspicious_transaction",
+      "style": "casual_burmese",
+      "question": "ကိုယ်မလုပ်ထားတဲ့ ငွေဖြတ်တာတွေ့တယ်၊ အခုဘာလုပ်ရမလဲ။",
+      "expected_grounded": true,
+      "expected_chunk_id": "suspicious_transaction",
+      "expected_document": "DEMO_Fraud_Response_Policy.pdf",
+      "expected_section": "Unauthorized Transaction",
+      "answer_must_contain": [
+        "temporary block",
+        "OTP"
+      ]
+    },
+    {
+      "id": "fraud_mixed",
+      "intent": "suspicious_transaction",
+      "style": "mixed_language",
+      "question": "Suspicious transaction တစ်ခု account ထဲမှာတွေ့တယ်။",
+      "expected_grounded": true,
+      "expected_chunk_id": "suspicious_transaction",
+      "expected_document": "DEMO_Fraud_Response_Policy.pdf",
+      "expected_section": "Unauthorized Transaction",
+      "answer_must_contain": [
+        "Customer Service Hotline",
+        "temporary block"
+      ]
+    },
+    {
+      "id": "pending_formal",
+      "intent": "transfer_pending",
+      "style": "formal_burmese",
+      "question": "ငွေလွှဲမှု pending ဖြစ်နေပြီး လက်ခံသူထံ မရောက်သေးပါက မည်သို့လုပ်ဆောင်ရမည်နည်း။",
+      "expected_grounded": true,
+      "expected_chunk_id": "transfer_pending",
+      "expected_document": "DEMO_Fund_Transfer_FAQ.pdf",
+      "expected_section": "Pending Transfer",
+      "answer_must_contain": [
+        "reference number",
+        "ထပ်မံမလွှဲ"
+      ]
+    },
+    {
+      "id": "pending_casual",
+      "intent": "transfer_pending",
+      "style": "casual_burmese",
+      "question": "လွှဲထားတဲ့ငွေ မရောက်သေးဘူး၊ ထပ်လွှဲလိုက်ရမလား။",
+      "expected_grounded": true,
+      "expected_chunk_id": "transfer_pending",
+      "expected_document": "DEMO_Fund_Transfer_FAQ.pdf",
+      "expected_section": "Pending Transfer",
+      "answer_must_contain": [
+        "transaction status",
+        "Customer Service"
+      ]
+    },
+    {
+      "id": "pending_mixed",
+      "intent": "transfer_pending",
+      "style": "mixed_language",
+      "question": "Transfer processing က ကြာနေတယ်၊ retry လုပ်သင့်လား။",
+      "expected_grounded": true,
+      "expected_chunk_id": "transfer_pending",
+      "expected_document": "DEMO_Fund_Transfer_FAQ.pdf",
+      "expected_section": "Pending Transfer",
+      "answer_must_contain": [
+        "pending",
+        "Customer Service"
+      ]
+    },
+    {
+      "id": "wrong_transfer_formal",
+      "intent": "wrong_account_transfer",
+      "style": "formal_burmese",
+      "question": "Account မှား၍ ငွေလွှဲမိပါက ငွေပြန်လည်ရရှိရန် မည်သို့တင်ပြရမည်နည်း။",
+      "expected_grounded": true,
+      "expected_chunk_id": "wrong_account_transfer",
+      "expected_document": "DEMO_Fund_Transfer_FAQ.pdf",
+      "expected_section": "Transfer to Wrong Account",
+      "answer_must_contain": [
+        "transaction reference number",
+        "အာမခံမရ"
+      ]
+    },
+    {
+      "id": "wrong_transfer_casual",
+      "intent": "wrong_account_transfer",
+      "style": "casual_burmese",
+      "question": "လူမှားပြီး ငွေလွှဲမိတယ်၊ ပြန်ရနိုင်မလား။",
+      "expected_grounded": true,
+      "expected_chunk_id": "wrong_account_transfer",
+      "expected_document": "DEMO_Fund_Transfer_FAQ.pdf",
+      "expected_section": "Transfer to Wrong Account",
+      "answer_must_contain": [
+        "Customer Service",
+        "transfer review"
+      ]
+    },
+    {
+      "id": "wrong_transfer_mixed",
+      "intent": "wrong_account_transfer",
+      "style": "mixed_language",
+      "question": "Wrong account ကို transfer မှားလွှဲမိပါတယ်။",
+      "expected_grounded": true,
+      "expected_chunk_id": "wrong_account_transfer",
+      "expected_document": "DEMO_Fund_Transfer_FAQ.pdf",
+      "expected_section": "Transfer to Wrong Account",
+      "answer_must_contain": [
+        "reference number",
+        "Customer Service"
+      ]
+    },
+    {
+      "id": "account_opening_formal",
+      "intent": "savings_account_opening",
+      "style": "formal_burmese",
+      "question": "Savings Account ဖွင့်လှစ်ရန် မည်သည့်စာရွက်စာတမ်းများ လိုအပ်ပါသနည်း။",
+      "expected_grounded": true,
+      "expected_chunk_id": "savings_account_opening",
+      "expected_document": "DEMO_Account_Opening_Guide.pdf",
+      "expected_section": "Savings Account Requirements",
+      "answer_must_contain": [
+        "valid identity document",
+        "application form"
+      ]
+    },
+    {
+      "id": "account_opening_casual",
+      "intent": "savings_account_opening",
+      "style": "casual_burmese",
+      "question": "ဘဏ်အကောင့်ဖွင့်ချင်လို့ ဘာတွေယူလာရမလဲ။",
+      "expected_grounded": true,
+      "expected_chunk_id": "savings_account_opening",
+      "expected_document": "DEMO_Account_Opening_Guide.pdf",
+      "expected_section": "Savings Account Requirements",
+      "answer_must_contain": [
+        "ဘဏ်ခွဲ",
+        "identity verification"
+      ]
+    },
+    {
+      "id": "account_opening_mixed",
+      "intent": "savings_account_opening",
+      "style": "mixed_language",
+      "question": "Savings account open လုပ်ဖို့ ID ဘာလိုမလဲ။",
+      "expected_grounded": true,
+      "expected_chunk_id": "savings_account_opening",
+      "expected_document": "DEMO_Account_Opening_Guide.pdf",
+      "expected_section": "Savings Account Requirements",
+      "answer_must_contain": [
+        "valid identity document",
+        "identity verification"
+      ]
+    },
+    {
+      "id": "expired_formal",
+      "intent": "expired_atm_card",
+      "style": "formal_burmese",
+      "question": "ATM ကတ်သက်တမ်းကုန်ဆုံးပါက အသစ်လဲလှယ်ရန် မည်သို့လျှောက်ထားရမည်နည်း။",
+      "expected_grounded": true,
+      "expected_chunk_id": "expired_atm_card",
+      "expected_document": "DEMO_ATM_Card_Renewal.pdf",
+      "expected_section": "Expired Card",
+      "answer_must_contain": [
+        "valid identity document",
+        "card renewal"
+      ]
+    },
+    {
+      "id": "expired_casual",
+      "intent": "expired_atm_card",
+      "style": "casual_burmese",
+      "question": "ကတ်သက်တမ်းကုန်သွားပြီ၊ ဘာယူပြီး ဘယ်သွားရမလဲ။",
+      "expected_grounded": true,
+      "expected_chunk_id": "expired_atm_card",
+      "expected_document": "DEMO_ATM_Card_Renewal.pdf",
+      "expected_section": "Expired Card",
+      "answer_must_contain": [
+        "ဘဏ်ခွဲ",
+        "PIN"
+      ]
+    },
+    {
+      "id": "expired_mixed",
+      "intent": "expired_atm_card",
+      "style": "mixed_language",
+      "question": "My ATM card expired ဖြစ်သွားလို့ renewal လုပ်ချင်ပါတယ်။",
+      "expected_grounded": true,
+      "expected_chunk_id": "expired_atm_card",
+      "expected_document": "DEMO_ATM_Card_Renewal.pdf",
+      "expected_section": "Expired Card",
+      "answer_must_contain": [
+        "expired card",
+        "replacement"
+      ]
+    },
+    {
+      "id": "unsupported_loan_rate",
+      "intent": "unsupported",
+      "style": "formal_burmese",
+      "question": "အိမ်ရာချေးငွေ အတိုးနှုန်း ဘယ်လောက်ရှိပါသလဲ။",
+      "expected_grounded": false
+    },
+    {
+      "id": "unsupported_branch_hours",
+      "intent": "unsupported",
+      "style": "casual_burmese",
+      "question": "မနက်ဖြန် ဘဏ်ဘယ်အချိန်ဖွင့်လဲ။",
+      "expected_grounded": false
+    },
+    {
+      "id": "unsupported_crypto",
+      "intent": "unsupported",
+      "style": "mixed_language",
+      "question": "Crypto wallet service ရှိလား။",
+      "expected_grounded": false
+    }
+  ]
+}

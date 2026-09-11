@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-08-18T16:47:04.228565+00:00",
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "model_generation": true,
+  "total": 1,
+  "passed": 1,
+  "failed": 0,
+  "samples": [
+    {
+      "id": "lost_formal",
+      "intent": "atm_lost_card",
+      "style": "formal_burmese",
+      "question": "ATM ကတ်ပျောက်ဆုံးသွားပါက မည်သို့ဆောင်ရွက်ရမည်နည်း။",
+      "expected_chunk_id": "chunk_9f823a",
+      "actual_chunk_id": "chunk_9f823a",
+      "expected_grounded": true,
+      "grounded": true,
+      "passed": true,
+      "answer": "ATM ကတ်ပျောက်ဆုံးပါက သက်ဆိုင်ရာ ဘဏ်သို့ ချက်ချင်း ဖုန်းဆက်၍ ကတ်အား ပိတ်ဆို့ (Block) ရပါမည်။ ဘဏ်ခွဲသို့ လူကိုယ်တိုင် သွားရောက်ပါက မှတ်ပုံတင် မူရင်း ယူဆောင်လာရပါမည်။",
+      "tts_text": "အေ တီ အမ် ကတ်ပျောက်ဆုံးပါက သက်ဆိုင်ရာ ဘဏ်သို့ ချက်ချင်း ဖုန်းဆက်၍ ကတ်အား ပိတ်ဆို့ (Block) ရပါမည်။ ဘဏ်ခွဲသို့ လူကိုယ်တိုင် သွားရောက်ပါက မှတ်ပုံတင် မူရင်း ယူဆောင်လာရပါမည်။",
+      "sources": [
+        {
+          "document": "ATM_Services_FAQ_v1.pdf",
+          "page": "3",
+          "section": "Card Loss Procedure",
+          "score": 0.885
+        },
+        {
+          "document": "ATM_Card_Security_v1.pdf",
+          "page": "4",
+          "section": "Lost Card Security",
+          "score": 0.812
+        }
+      ],
+      "model_attempts": [
+        {
+          "duration_seconds": 61.467,
+          "output": "ATM ကတ်ပျောက်ဆုံးပါက သက်ဆိုင်ရာ ဘဏ်သို့ ချက်ချင်း ဖုန်းဆက်၍ ကတ်အား ပိတ်ဆို့ (Block) ရပါမည်။ ဘဏ်ခွဲသို့ လူကိုယ်တိုင် သွားရောက်ပါက မှတ်ပုံတင် မူရင်း ယူဆောင်လာရပါမည်။",
+          "error": null
+        }
+      ]
+    }
+  ]
+}

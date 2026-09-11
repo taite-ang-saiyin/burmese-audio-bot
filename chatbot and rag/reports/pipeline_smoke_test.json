@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-08-17T04:32:36.849209+00:00",
+  "force_model": false,
+  "total": 2,
+  "passed": 2,
+  "failed": 0,
+  "samples": [
+    {
+      "id": "lost_formal",
+      "intent": "atm_lost_card",
+      "style": "formal_burmese",
+      "question": "ATM ကတ်ပျောက်ဆုံးသွားပါက မည်သို့ဆောင်ရွက်ရမည်နည်း။",
+      "expected_chunk_id": "atm_lost_card",
+      "actual_chunk_id": "atm_lost_card",
+      "expected_grounded": true,
+      "grounded": true,
+      "passed": true,
+      "answer": "ATM ကတ်ပျောက်ဆုံးပါက Customer Service Hotline ကို ချက်ချင်းဆက်သွယ်ပေးပါ။ ကတ်ကို မသက်ဆိုင်သူများ အသုံးမပြုနိုင်စေရန် ယာယီပိတ်ထားခြင်း (temporary block) ပြုလုပ်ရန် လိုအပ်ပါတယ်။",
+      "tts_text": "အေ တီ အမ် ကတ်ပျောက်ဆုံးပါက Customer Service Hotline ကို ချက်ချင်းဆက်သွယ်ပေးပါ။ ကတ်ကို မသက်ဆိုင်သူများ အသုံးမပြုနိုင်စေရန် ယာယီပိတ်ထားခြင်း (temporary block) ပြုလုပ်ရန် လိုအပ်ပါတယ်။",
+      "sources": [
+        {
+          "document": "ATM_Card_Policy.pdf",
+          "page": 5,
+          "section": "Lost Card",
+          "score": 0.94
+        }
+      ],
+      "model_attempts": []
+    },
+    {
+      "id": "lost_casual",
+      "intent": "atm_lost_card",
+      "style": "casual_burmese",
+      "question": "ကတ်လေးပျောက်သွားလို့ ဘာအရင်လုပ်ရမလဲ။",
+      "expected_chunk_id": "atm_lost_card",
+      "actual_chunk_id": "atm_lost_card",
+      "expected_grounded": true,
+      "grounded": true,
+      "passed": true,
+      "answer": "ATM ကတ်ပျောက်ဆုံးပါက Customer Service Hotline ကို ချက်ချင်းဆက်သွယ်ပေးပါ။ ကတ်ကို မသက်ဆိုင်သူများ အသုံးမပြုနိုင်စေရန် ယာယီပိတ်ထားခြင်း (temporary block) ပြုလုပ်ရန် လိုအပ်ပါတယ်။",
+      "tts_text": "အေ တီ အမ် ကတ်ပျောက်ဆုံးပါက Customer Service Hotline ကို ချက်ချင်းဆက်သွယ်ပေးပါ။ ကတ်ကို မသက်ဆိုင်သူများ အသုံးမပြုနိုင်စေရန် ယာယီပိတ်ထားခြင်း (temporary block) ပြုလုပ်ရန် လိုအပ်ပါတယ်။",
+      "sources": [
+        {
+          "document": "ATM_Card_Policy.pdf",
+          "page": 5,
+          "section": "Lost Card",
+          "score": 0.94
+        }
+      ],
+      "model_attempts": []
+    }
+  ]
+}

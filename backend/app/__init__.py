@@ -1,0 +1,1 @@
+"""Mingalar Banking API package."""

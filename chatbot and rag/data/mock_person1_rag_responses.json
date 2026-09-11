@@ -1,0 +1,292 @@
+{
+  "demo_only": true,
+  "notice": "Synthetic Person 1 RAG responses for local integration testing. These are not policies of a real bank.",
+  "responses": [
+    {
+      "query": "ATM ကတ် ပျောက်သွားရင် ဘာလုပ်ရမလဲ။",
+      "has_context": true,
+      "retrieved_count": 2,
+      "max_score": 0.885,
+      "contexts": [
+        {
+          "chunk_id": "chunk_9f823a",
+          "text": "ATM ကတ် ပျောက်ဆုံးပါက သက်ဆိုင်ရာ ဘဏ်သို့ ချက်ချင်း ဖုန်းဆက်၍ ကတ်အား ပိတ်ဆို့ (Block) ရပါမည်။ ဘဏ်ခွဲသို့ လူကိုယ်တိုင် သွားရောက်ပါက မှတ်ပုံတင် မူရင်း ယူဆောင်လာရပါမည်။",
+          "score": 0.885,
+          "metadata": {
+            "doc_id": "doc_101",
+            "doc_name": "ATM_Services_FAQ_v1.pdf",
+            "page_label": "3",
+            "section_title": "Card Loss Procedure",
+            "department": "Retail Banking",
+            "last_updated": "2026-01-15"
+          }
+        },
+        {
+          "chunk_id": "chunk_43c1bd",
+          "text": "ကတ်ပျောက်ဆုံးမှုကို အကြောင်းကြားရာတွင် PIN ကို မည်သူ့ကိုမျှ မပြောပြရပါ။ ကတ်အသစ်လျှောက်ထားခြင်းကို ဘဏ်ခွဲတွင် ကိုယ်ရေးအချက်အလက် စစ်ဆေးအတည်ပြုပြီးမှ ဆောင်ရွက်ပေးပါမည်။",
+          "score": 0.812,
+          "metadata": {
+            "doc_id": "doc_202",
+            "doc_name": "ATM_Card_Security_v1.pdf",
+            "page_label": "4",
+            "section_title": "Lost Card Security",
+            "department": "Card Security",
+            "last_updated": "2026-01-15"
+          }
+        }
+      ]
+    },
+    {
+      "query": "ATM ကတ်အသစ်ပြန်လည်လျှောက်ထားရန် မည်သည့်လုပ်ငန်းစဉ်များ လိုအပ်ပါသနည်း။",
+      "has_context": true,
+      "retrieved_count": 1,
+      "max_score": 0.91,
+      "contexts": [
+        {
+          "chunk_id": "atm_card_replacement",
+          "text": "ATM ကတ်အသစ်ပြန်လည်လျှောက်ထားရန် နီးစပ်ရာဘဏ်ခွဲတွင် identity verification ပြုလုပ်ရန် လိုအပ်သည်။ PIN ကို ဘဏ်ဝန်ထမ်းအပါအဝင် မည်သူ့ကိုမျှ မပြောပြရပါ။",
+          "score": 0.91,
+          "metadata": {
+            "doc_id": "doc_102",
+            "doc_name": "ATM_Card_Policy.pdf",
+            "page_label": "6",
+            "section_title": "Card Replacement",
+            "department": "Retail Banking",
+            "last_updated": "2026-01-15"
+          }
+        }
+      ]
+    },
+    {
+      "query": "ATM မှ ငွေထုတ်ရာတွင် ငွေမထွက်ဘဲ account balance လျော့သွားပါက ဘာလုပ်ရမည်နည်း။",
+      "has_context": true,
+      "retrieved_count": 1,
+      "max_score": 0.93,
+      "contexts": [
+        {
+          "chunk_id": "atm_cash_not_received",
+          "text": "ATM မှ ငွေထုတ်ရာတွင် ငွေမထွက်ဘဲ account balance မှ နုတ်ယူထားပါက transaction receipt သို့မဟုတ် reference number၊ ဖြစ်ပွားသည့်အချိန်နှင့် ATM location ကို မှတ်သား၍ တရားဝင် Customer Service ကို ဆက်သွယ်တင်ပြရမည်။",
+          "score": 0.93,
+          "metadata": {
+            "doc_id": "doc_103",
+            "doc_name": "DEMO_ATM_Dispute_Procedure.pdf",
+            "page_label": "3",
+            "section_title": "Cash Not Dispensed",
+            "department": "ATM Operations",
+            "last_updated": "2026-01-15"
+          }
+        }
+      ]
+    },
+    {
+      "query": "ATM စက်ထဲတွင် ကတ်ကျန်နေပြီး ကတ်မထွက်ပါက မည်သို့လုပ်ဆောင်ရမည်နည်း။",
+      "has_context": true,
+      "retrieved_count": 1,
+      "max_score": 0.95,
+      "contexts": [
+        {
+          "chunk_id": "atm_card_retained",
+          "text": "ATM စက်က ကတ်ကို ပြန်မထုတ်ပေးဘဲ သိမ်းထားပါက စက်ကို အတင်းအကျပ်မဖွင့်ရပါ။ ATM location နှင့် အချိန်ကို မှတ်သားပြီး Customer Service Hotline သို့မဟုတ် သက်ဆိုင်ရာဘဏ်ခွဲကို ချက်ချင်းဆက်သွယ်ရမည်။",
+          "score": 0.95,
+          "metadata": {
+            "doc_id": "doc_104",
+            "doc_name": "DEMO_ATM_Operations_Guide.pdf",
+            "page_label": "8",
+            "section_title": "Card Retained by ATM",
+            "department": "ATM Operations",
+            "last_updated": "2026-01-15"
+          }
+        }
+      ]
+    },
+    {
+      "query": "PIN မှားယွင်းရိုက်ထည့်မိ၍ ကတ်ပိတ်သွားပါက မည်သို့ဆောင်ရွက်ရမည်နည်း။",
+      "has_context": true,
+      "retrieved_count": 1,
+      "max_score": 0.92,
+      "contexts": [
+        {
+          "chunk_id": "atm_pin_blocked",
+          "text": "ATM PIN ကို အကြိမ်ကြိမ်မှားယွင်းရိုက်ထည့်၍ ကတ်ပိတ်သွားပါက ထပ်မံမစမ်းသပ်ဘဲ နီးစပ်ရာဘဏ်ခွဲတွင် identity verification ပြုလုပ်၍ PIN reset သို့မဟုတ် card unblock လုပ်ငန်းစဉ်ကို ဆောင်ရွက်ရမည်။ PIN ကို မည်သူ့ကိုမျှ မပြောပြရပါ။",
+          "score": 0.92,
+          "metadata": {
+            "doc_id": "doc_105",
+            "doc_name": "DEMO_ATM_PIN_Security.pdf",
+            "page_label": "4",
+            "section_title": "Incorrect PIN and Card Block",
+            "department": "Card Security",
+            "last_updated": "2026-01-15"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Mobile Banking OTP မရရှိပါက မည်သို့ဆောင်ရွက်ရမည်နည်း။",
+      "has_context": true,
+      "retrieved_count": 1,
+      "max_score": 0.9,
+      "contexts": [
+        {
+          "chunk_id": "mobile_otp_not_received",
+          "text": "Mobile Banking OTP မရရှိပါက registered phone number ၏ network signal ကို စစ်ဆေးပြီး resend ကို တစ်ကြိမ်သာ စမ်းသပ်နိုင်သည်။ OTP ကို မည်သူ့ကိုမျှ မပြောပြရဘဲ ဆက်လက်မရရှိပါက တရားဝင် Customer Service ကို ဆက်သွယ်ရမည်။",
+          "score": 0.9,
+          "metadata": {
+            "doc_id": "doc_106",
+            "doc_name": "DEMO_Mobile_Banking_FAQ.pdf",
+            "page_label": "7",
+            "section_title": "OTP Not Received",
+            "department": "Digital Banking",
+            "last_updated": "2026-01-15"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Mobile Banking Password မေ့သွားပါက မည်သို့ reset ပြုလုပ်ရမည်နည်း။",
+      "has_context": true,
+      "retrieved_count": 1,
+      "max_score": 0.91,
+      "contexts": [
+        {
+          "chunk_id": "mobile_password_reset",
+          "text": "Mobile Banking Password မေ့သွားပါက တရားဝင် application ရှိ Forgot Password လုပ်ဆောင်ချက်ကို အသုံးပြုရမည်။ Password နှင့် OTP ကို မည်သူ့ကိုမျှ မပြောပြရဘဲ reset မအောင်မြင်ပါက Customer Service ကို ဆက်သွယ်ရမည်။",
+          "score": 0.91,
+          "metadata": {
+            "doc_id": "doc_107",
+            "doc_name": "DEMO_Mobile_Banking_FAQ.pdf",
+            "page_label": "9",
+            "section_title": "Password Reset",
+            "department": "Digital Banking",
+            "last_updated": "2026-01-15"
+          }
+        }
+      ]
+    },
+    {
+      "query": "မိမိမပြုလုပ်သော transaction တစ်ခုတွေ့ရှိပါက မည်သို့တင်ပြရမည်နည်း။",
+      "has_context": true,
+      "retrieved_count": 1,
+      "max_score": 0.96,
+      "contexts": [
+        {
+          "chunk_id": "suspicious_transaction",
+          "text": "မိမိမပြုလုပ်သော သို့မဟုတ် suspicious transaction တွေ့ရှိပါက Customer Service Hotline ကို ချက်ချင်းဆက်သွယ်၍ သက်ဆိုင်ရာ channel ကို temporary block ပြုလုပ်ရန်နှင့် transaction review တောင်းဆိုရန် လိုအပ်သည်။ PIN၊ Password နှင့် OTP ကို မပေးရပါ။",
+          "score": 0.96,
+          "metadata": {
+            "doc_id": "doc_108",
+            "doc_name": "DEMO_Fraud_Response_Policy.pdf",
+            "page_label": "2",
+            "section_title": "Unauthorized Transaction",
+            "department": "Fraud Risk Management",
+            "last_updated": "2026-01-15"
+          }
+        }
+      ]
+    },
+    {
+      "query": "ငွေလွှဲမှု pending ဖြစ်နေပြီး လက်ခံသူထံ မရောက်သေးပါက မည်သို့လုပ်ဆောင်ရမည်နည်း။",
+      "has_context": true,
+      "retrieved_count": 1,
+      "max_score": 0.89,
+      "contexts": [
+        {
+          "chunk_id": "transfer_pending",
+          "text": "ငွေလွှဲမှု pending သို့မဟုတ် processing ဖြစ်နေပါက transaction status နှင့် reference number ကို စစ်ဆေးရမည်။ အခြေအနေမသေချာမီ ထပ်မံလွှဲခြင်းမပြုဘဲ ဆက်လက် pending ဖြစ်ပါက Customer Service ကို ဆက်သွယ်ရမည်။",
+          "score": 0.89,
+          "metadata": {
+            "doc_id": "doc_109",
+            "doc_name": "DEMO_Fund_Transfer_FAQ.pdf",
+            "page_label": "5",
+            "section_title": "Pending Transfer",
+            "department": "Payments Operations",
+            "last_updated": "2026-01-15"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Account မှား၍ ငွေလွှဲမိပါက ငွေပြန်လည်ရရှိရန် မည်သို့တင်ပြရမည်နည်း။",
+      "has_context": true,
+      "retrieved_count": 1,
+      "max_score": 0.94,
+      "contexts": [
+        {
+          "chunk_id": "wrong_account_transfer",
+          "text": "Account မှားယွင်း၍ ငွေလွှဲမိပါက transaction reference number ကို မှတ်သားပြီး Customer Service ကို ချက်ချင်းဆက်သွယ်ကာ transfer review တောင်းဆိုရမည်။ ငွေပြန်ရမည်ဟု အာမခံ၍ မရဘဲ ဘဏ်၏စစ်ဆေးမှုရလဒ်ပေါ် မူတည်သည်။",
+          "score": 0.94,
+          "metadata": {
+            "doc_id": "doc_110",
+            "doc_name": "DEMO_Fund_Transfer_FAQ.pdf",
+            "page_label": "6",
+            "section_title": "Transfer to Wrong Account",
+            "department": "Payments Operations",
+            "last_updated": "2026-01-15"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Savings Account ဖွင့်လှစ်ရန် မည်သည့်စာရွက်စာတမ်းများ လိုအပ်ပါသနည်း။",
+      "has_context": true,
+      "retrieved_count": 1,
+      "max_score": 0.9,
+      "contexts": [
+        {
+          "chunk_id": "savings_account_opening",
+          "text": "Savings Account ဖွင့်လှစ်ရန် နီးစပ်ရာဘဏ်ခွဲသို့ valid identity document နှင့် ဆက်သွယ်ရန်အချက်အလက်များ ယူဆောင်လာပြီး customer identity verification နှင့် application form ဖြည့်စွက်ခြင်း ပြုလုပ်ရမည်။",
+          "score": 0.9,
+          "metadata": {
+            "doc_id": "doc_111",
+            "doc_name": "DEMO_Account_Opening_Guide.pdf",
+            "page_label": "3",
+            "section_title": "Savings Account Requirements",
+            "department": "Retail Banking",
+            "last_updated": "2026-01-15"
+          }
+        }
+      ]
+    },
+    {
+      "query": "ATM ကတ်သက်တမ်းကုန်ဆုံးပါက အသစ်လဲလှယ်ရန် မည်သို့လျှောက်ထားရမည်နည်း။",
+      "has_context": true,
+      "retrieved_count": 1,
+      "max_score": 0.92,
+      "contexts": [
+        {
+          "chunk_id": "expired_atm_card",
+          "text": "ATM ကတ်သက်တမ်းကုန်ဆုံးပါက expired card နှင့် valid identity document ကို ယူဆောင်၍ နီးစပ်ရာဘဏ်ခွဲတွင် card renewal သို့မဟုတ် replacement လျှောက်ထားရမည်။ PIN ကို မပေးရပါ။",
+          "score": 0.92,
+          "metadata": {
+            "doc_id": "doc_112",
+            "doc_name": "DEMO_ATM_Card_Renewal.pdf",
+            "page_label": "2",
+            "section_title": "Expired Card",
+            "department": "Card Operations",
+            "last_updated": "2026-01-15"
+          }
+        }
+      ]
+    },
+    {
+      "query": "အိမ်ရာချေးငွေ အတိုးနှုန်း ဘယ်လောက်ရှိပါသလဲ။",
+      "has_context": false,
+      "retrieved_count": 0,
+      "max_score": 0.0,
+      "contexts": []
+    },
+    {
+      "query": "မနက်ဖြန် ဘဏ်ဘယ်အချိန်ဖွင့်လဲ။",
+      "has_context": false,
+      "retrieved_count": 0,
+      "max_score": 0.0,
+      "contexts": []
+    },
+    {
+      "query": "Crypto wallet service ရှိလား။",
+      "has_context": false,
+      "retrieved_count": 0,
+      "max_score": 0.0,
+      "contexts": []
+    }
+  ]
+}
